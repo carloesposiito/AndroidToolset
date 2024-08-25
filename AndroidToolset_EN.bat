@@ -261,7 +261,7 @@ if %doChoice% equ 0 (
 ) else if %doChoice% equ 4 (
    adb shell pm list packages -u
 ) else (
-   echo adb shell pm uninstall -k --user 0 %doChoice%
+   adb shell pm uninstall -k --user 0 %doChoice%
 )
 echo.
 goto UninstallByPackageName
