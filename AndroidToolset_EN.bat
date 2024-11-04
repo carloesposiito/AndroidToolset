@@ -121,7 +121,8 @@ echo (3) - Restore extracted data
 echo (4) - Copy files to device Documents folder
 echo (5) - Obtain root permissions
 echo (6) - Try to restore NFC toggle
-echo (7) - Close AndroidToolset
+echo (7) - Refresh connected devices
+echo (8) - Close AndroidToolset
 echo.
 set /p operationNumber=Operation number: 
 
@@ -144,6 +145,10 @@ if %operationNumber% equ 1 (
    echo.
    goto enableNFC
 ) else if %operationNumber% equ 7 (
+   echo.
+   goto checkDeviceConnection
+adb devices
+) else if %operationNumber% equ 8 (
    echo.
    goto exit  
 ) else (
