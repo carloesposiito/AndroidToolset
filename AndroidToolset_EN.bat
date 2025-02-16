@@ -1,6 +1,9 @@
 @echo off
 cd PlatformTools\
 
+REM Extract PlatformTools files to directory
+tar -xf "PlatformTools.zip"
+
 set zero=..\
 set base=..\0\
 set baseWhatsapp=..\0\Android\media\com.whatsapp\
